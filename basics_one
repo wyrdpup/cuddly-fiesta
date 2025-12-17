@@ -26,4 +26,29 @@
   # Variables are a very basic but very essential concept to understand as their logic/rules sets how EVERYTHING ELSE works...or doesn't :)
 
       # KEY PARTS OF VARIABLES:
+        # 1. name - how to make a variable unique with a distinct definition. Note that the name means ABSOLUTELY NOTHING to python itself and only really cares about variable names matching what the code wants or not being contradictory (e.g two variables with the same name)
+          # e.g "name_check = a, b" and "name = first, last" are functionally identical
+        # best practise for names is lowercase with underscores (this_is_a_variable, this_is_another_variable) and use something descriptive for readability
+
+      # 2. type - there are a solid mumber of variable types, but some basic ones include:
+          # strings (str) - ("hello")
+          # integer (int) - (30)
+          # float - (30.3) (basically, 'number with decimal')
+          # boolean - (True or False) 
+          # none - (None) (important to note this is DISTINCT to 0 or nothing)
+          # tuple - animal = ("dog", "cat", "bird")
+              # I will go into tuples in more detail later on, but it's important to note that these are distinct from lists in that a tuple can't be edited whereas a list can be manipulated 
+          # list - animal = ["dog", "cat," "bird"]
+              # Similarly I will expand on this more later, but this list can be spliced
+
+
+
+
+
+
+def animal_list()
+  critters = ["dog", "cat", bird"]
+  print(critters[1:]
+    
+
   
