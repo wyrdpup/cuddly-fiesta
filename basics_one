@@ -41,14 +41,3 @@
           # list - animal = ["dog", "cat," "bird"]
               # Similarly I will expand on this more later, but this list can be spliced
 
-
-
-
-
-
-def animal_list()
-  critters = ["dog", "cat", bird"]
-  print(critters[1:]
-    
-
-  
