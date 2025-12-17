@@ -1,0 +1,29 @@
+# with inspiration from someone also learning with "30 days of python" this will also be a dump of things I've been learning
+# I will probably get things wrong or misunderstand things - so I think writing down my logic in one place so I can either revisit it or identify where I went wrong coming from point A to point B is going to be helpful!
+
+
+
+# CONCEPT: what's a shell?
+  # The environment where a code actually is run
+
+  # You can write in a shell, but probably don't :) 
+
+  # The output of a shell does contain all the context of whatever the code has, so it can be amended in the shell without needing to redefine anything - just make sure you're following the logic of your code!
+
+  
+
+# CONCEPT: what's an editor?
+  # The environment for writing code. Easy to edit (unsurprising) 
+
+  # You can generally run code in editors to test it. Does not automatically print values, whereas a shell will 
+  
+
+# CONCEPT: what's a variable?
+  # A variable is a symbolic representation of a value. 
+  # A variable doesn't mean anything by itself - they need to be defined. For example a variable named 1 isn't understood as the number, unless the value it has is 1 (e.g 1 = 1)
+  # "Bucket analogy" can be helpful. When empty it is a bucket. When a value added the variable can be become a bucket of water, bucket of 324542, bucket of True, bucket of entire blocks of code under a loop.
+  
+  # Variables are a very basic but very essential concept to understand as their logic/rules sets how EVERYTHING ELSE works...or doesn't :)
+
+      # KEY PARTS OF VARIABLES:
+  
