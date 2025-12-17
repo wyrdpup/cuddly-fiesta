@@ -1,0 +1,41 @@
+def check_ingredient_match(recipe, inventory):
+    missing_item = []
+    correct_ingredients_found = 0
+    for item in recipe:
+        if item in inventory:
+           correct_ingredients_found += 1
+        else:
+            missing_item.append(item)
+    percentage = (correct_ingredients_found/len(recipe)) * 100
+    return percentage, missing_item
+
+
+# this is what I ended up building with the "alchemy ingredients" lesson through bootdev. this produced a list of items in a recipe, a list of items in an inventory, then told us the percentage of items we did have and the items we were missing
+  # important to note that some of the context of this is missing - this is ONLY the function to see if we have matching ingredients for our recipe and calculate a percentage
+
+# breaking this down - 
+  # set our definition using the parameters recipe, inventory
+  # set an empty list to populate later
+  # set a correct_ingredients_found variable with a value of 0 - this is the basis of our ingredient counting 
+
+# loops!
+  # still struggling with these
+  # "for item in recipe" is asking - for each element in recipe, assign it to item for each loop iteration 
+      ### simplified: “Look at the values in recipe one by one and, for each value, call it item for now.”
+    # lets say the elements of recipe are "dragon horn" and "dragon scale", then the first loop uses the value of "dragon horn" and the second uses the vlaue of "dragon scale" 
+    # note that item did not exist outside this loop - it gets it definition from its interaction with recipe
+
+ # "if item in inventory" is now asking to compare the value of item (which is assigned a value from recipe each loop) to whether or not it is within inventory. This can only be True or False, because it uses a boolean expression to determine which block to run (True -> "if", False -> Else)
+    # we have also added a variable that says "if this criteria is met, then add 1 to correct_ingredients_found". Since correct_ingredients_found was set outside the loop, it accumulates across iterations every time the condition is True.
+
+# else is what the loop progresses to if the above criteria isn't met. if the value of item is *not* in inventory, then it is appended to the empty list of `missing_item`. so, for example, if the criteria of "if" was False for "dragon horn", we would add "dragon horn" to our missing_item list
+
+# outside this loop, we calculate a percentage by using the value of `correct_ingredients_found` divided by the length of the recipe multiplied by 100 to get a percentage. note that this automatically calculates a float due to using division! It’s important this calculation is outside the loop; if it were inside, percentage would be recomputed and overwritten on every iteration instead of once after the full count is known - for this function, we want to know what the percentage is for each value. 
+
+# we then return percentage, missing_item - the function is complete. The function is done and hands back both the percentage and the list of missing ingredients for whatever `recipe` and `inventory` were passed in (in this case, this is the check_ingredients_match function)
+
+
+# other things I understood:
+  # both "inventory" and "recipe" took their values from lists defined elsewhere to be passed as arguments through the function
+  # arguments are valeus used in a function call, parameters are within the function itself (e.g def check_ingredient_match(recipe, inventory) = parameters)
+  # this is schemantics to a degree 
