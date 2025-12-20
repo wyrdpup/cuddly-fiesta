@@ -4,9 +4,18 @@
 # TypeScript seems common, along with Python. SQL, .Net Stack, Node.js as well. So I swapped from GoLang to TypeScript, unless this changes in the next 12 months :)
 # Most junior positions state "or equivalent experience" to compsci degrees. I do have a degree in an unrelated field and some coding experience from that (fairly limited) as well as some industry specific software that benefitted from knowing a bit (ArcGIS, RStudio). So I guess it isn't totally hopeless bullshit, even if I'd probably be competing with a bunch of 20 somethings (workplace experience is a positive?!)
 
-# Revisited very simple loops with for & if - no concrete lessons today, I just asked for some challenges in training
-# I felt pretty ok with these! I did struggle with them last week, so it is nice to go back to something and see I have built my understanding up a little. I still trip over "obvious" mistakes (wrong mathematical symbol, typos, quotes where they are(n't) needed, forgetting when to use == v = but I think those come with time...maybe
+# I did also think about what sort of personal projects I might want to work on -
+# I had the silly idea of using a database of racehorse names to provide a generator assigned umamusume, expanding the horses beyond the JRA. Which of course means it needs to include Phar Lap, seeing as Cinderella Gray has NZ horses too! I thought it'd be fun to include the current gen of JRA racehorses as a perhaps separate point of data (e.g "do you want to scout a classic winner or a rising star?"). I think in theory this is not overly complicated when my knowledge starts to build, but I would need to learn how to randomly select from a library (and realistically a library would get very unweildy very quickly).
+# I tracked a lot of data from doing mentor roulette in final fantasy 14. This is all in a CSV file, so I thought it would be "fun" to transform and see what ways I can display the data. It's got 2000 points of data so it's a respectable size! 
+    # I can hear the distant memory of pandas stirring in my brain for this (and the horse one...) which I am ignoring because this was extremely poorly explained at me at uni and I have a lot of 'eugh' about as a result
+# Simpler project: "is my cat fat?" I'm step-parent to a very fat maine coon cross and thought it'd be funny to compare weights of other cats to her. Bonus silly is that her name is Pascal so you can get your cat weight in Pascals (...not the unit of pressure).
+    # If I was more physics minded I'm sure it's possible to figure out PSI. But I am not, and there is a reason I just nod and look at the graph when dealing with pumps at work... :) 
 
+
+# Learning! 
+
+# Revisited very simple loops with for & if - no concrete lessons today, I just asked for some challenges in training. I want to keep a habit over the Christmas holiday, even if it's only doing small things or revisiting really basic stuff. 
+# I felt pretty ok with these! I did struggle with them last week, so it is nice to go back to something and see I have built my understanding up a little. I still trip over "obvious" mistakes (wrong mathematical symbol, typos, quotes where they are(n't) needed, forgetting when to use == v = but I think those come with time...maybe.
 
 
 # This was a simple loop to create a `count_high_scores` function
@@ -16,7 +25,7 @@ def count_high_scores(scores, threshold): ### scores are intergers (player score
     for score in scores: # saying 'score' should take the element from 'scores' 
         if score >= threshold: # when the value of score is greater or equal to the value of threshold
             counter += 1 # add one to the counter
-    return counter # says "count_high_score" should return the value of counter when called - this would show how many high scores we had
+    return counter # says "count_high_score" should return the value of counter when called - this would show how many high scores we had in total
 
 
 #And built on with these two:
@@ -28,15 +37,20 @@ def count_rare_ingredients (ingredients, rare_item_name):
             base += 1
     return base
 
+# Same structure as above, but using the value of ingredients (stored to the new variable of rare) against the values of rare_item_name and calculating how many rare items we have. As above, this returns the total value of rare items with the function count_rare_ingredients. 
 
 
+def count_strong_adventurers(adventurers_strength, minimum_strength):
+    counter = 0
+    for strong in adventurers_strength:
+        if strong >= minimum_strength:
+            counter += 1
+    return counter
 
-    def count_strong_adventurers(adventurers_strength, minimum_strength):
-        counter = 0
-        for strong in adventurers_strength:
-            if strong >= minimum_strength:
-                counter += 1
-        return counter
+
+# Again, similar structure - but this one is asking "how many adventurers do we have that meet or exceed the minimum strength value?" This might be for a skill check, for example, and showing how many party members met the requirement. 
+# A trip up I had was a) mistyping "minimum_strength" as "maximum_strength" and b) forgetting that >= exists when we want to check if a value is the SAME or GREATER. For people with stronger maths backgrounds this doubtless comes across as a bit silly, but that isn't me. :)
+    # Funnily enough I actually feel I am learning way more about maths trying to self teach code. I keep meaning to make time to go through Khan Academy because I feel revisiting algebra and calculus would help me out (especially for some more complicated projects...) but I will cross that bridge in the future as to not overwhelm myself I think. I also haven't thought about order of operations in literally decades!
 
 
 # all of these just involved integers, and I then was given an example challenge that combined lists with string values - this was a lot harder and I couldn't solve parts of it, as I've only very recently finished the basic introduction to lists
