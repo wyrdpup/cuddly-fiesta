@@ -1,0 +1,68 @@
+# Things I did today:
+
+# Out of curiosity (and optimism) I looked what programming language junior jobs in my area look for. Obviously this is something that is a year or more away from being remotely feasible, and who knows if I'll stick out past a month - though I've been doing this for 2+ weeks which is a good habit! 
+# TypeScript seems common, along with Python. SQL, .Net Stack, Node.js as well. So I swapped from GoLang to TypeScript, unless this changes in the next 12 months :)
+# Most junior positions state "or equivalent experience" to compsci degrees. I do have a degree in an unrelated field and some coding experience from that (fairly limited) as well as some industry specific software that benefitted from knowing a bit (ArcGIS, RStudio). So I guess it isn't totally hopeless bullshit, even if I'd probably be competing with a bunch of 20 somethings (workplace experience is a positive?!)
+
+# Revisited very simple loops with for & if - no concrete lessons today, I just asked for some challenges in training
+# I felt pretty ok with these! I did struggle with them last week, so it is nice to go back to something and see I have built my understanding up a little. I still trip over "obvious" mistakes (wrong mathematical symbol, typos, quotes where they are(n't) needed, forgetting when to use == v = but I think those come with time...maybe
+
+
+
+# This was a simple loop to create a `count_high_scores` function
+
+def count_high_scores(scores, threshold): ### scores are intergers (player scores), threshold is an interger (whatever the high score is)
+    counter = 0  # basic counter
+    for score in scores: # saying 'score' should take the element from 'scores' 
+        if score >= threshold: # when the value of score is greater or equal to the value of threshold
+            counter += 1 # add one to the counter
+    return counter # says "count_high_score" should return the value of counter when called - this would show how many high scores we had
+
+
+#And built on with these two:
+
+def count_rare_ingredients (ingredients, rare_item_name):
+    base = 0
+    for rare in ingredients:
+        if rare = rare_item_name:
+            base += 1
+    return base
+
+
+
+
+    def count_strong_adventurers(adventurers_strength, minimum_strength):
+        counter = 0
+        for strong in adventurers_strength:
+            if strong >= minimum_strength:
+                counter += 1
+        return counter
+
+
+# all of these just involved integers, and I then was given an example challenge that combined lists with string values - this was a lot harder and I couldn't solve parts of it, as I've only very recently finished the basic introduction to lists
+
+# the challenge was to remove all instances of "Broken..." from a list for repairing items
+# this involved specifying using the indexes of a range the length of the item_list variable
+# we then created a variable called "current_item" which took on the value of `item_list[index]` (so whatever was in the item_list value at a given index within the range)
+# our if criteria was asking "if the value of current_item starts with "Broken " ...the space is important here, as it includes things like "Broken Shield". Without it, it would only find the word "Broken"
+# for items that met the if criteria, we then used replace to take "Broken " and replace it with "". This would turn Broken Shield into Shield within the value of current_item
+# we then say that the value of item_list at whatever index is now equal to the value of current_item, overwriting what was there
+# we then return entire item_list (which would be a list)
+
+
+def repair_broken_items(item_list):
+    for index in range(len(item_list)):
+       current_item = item_list[index]              
+           if current_item.startswith("Broken "):   
+               current item = current_item.replace("Broken ", "")
+                item_list[index] = current_item    
+    return item_list
+
+
+# Rephrasing my understanding: 
+# 1. definition made, argument of item_list
+# 2. our 'for' criteria starts using with every index using the range of the length of the variable item_list: 
+# 3. we create 'current_item' which we use within this function only. we get this from the index of item_list
+# 4. if the value of current_item then begins with "Broken " (the space is important to include "Broken Shield" for example), we then replace "Broken " with "". This would result in "Broken Shield" becoming "Shield"
+# 5. We then say whatever index of `item_list` is currently being used now equals `current item`. If it doesn't meet the criteria of containing Broken , it is the same as it is in the index. Otherwise, Broken  is removed from the string and stored in `current_item`
+# 6. Item_list is returned (containing the result of the loop we carried out) when the definition is called
