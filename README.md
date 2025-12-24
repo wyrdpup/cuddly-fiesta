@@ -10,7 +10,11 @@ I don't have masses of experience - my degree had me using a bit of Python as fa
 # how I'm learning
 I'm using boot.dev as my primary structured resource, with some futurecoder and my own research
 
-Yes, that includes digging through the python documentation and getting rapidly very confused... :)
+This has been good too:
+
+https://programming-25.mooc.fi/
+
+And includes digging through the python documentation and getting rapidly very confused... :)
 
 # a question for YOU!
 ...how did you get here?! 
